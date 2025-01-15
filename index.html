@@ -10,39 +10,23 @@
     <p id="greeting">Some paragh</p>
     <p id="movieticket">Price of movie ticket</p>
     <script>
-        let name = "Fido";
-        name = "No";
-        
-        const TAX_RATE = 5;
 
-        let fName = "Stitch"; //String
-        console.log(fName); // string variable
-        let age = 25; // number variable
-        let length = 5.5; // number variable
-        let strLength = "5.5"; // string
-        let isStudent = true; // boolean variable
-        console.log(isStudent);
+        let userAge = null;
 
-        //concat or overload
-
-        console.log(name + " Wow " + isStudent);
-        let a = 5 + 3;
-        let b = 5 + "3" + 3 + 5;
-        let c = 6 * "6" + 3 + "3";
-        console.log(a);
-        console.log(b);
-        console.log(c);
-
-        //template literal 
-
-        let altGreeting = "I forgot"
-        let greeting = "Aloha " + name + "!";
-        greeting = `Your name is ${name}`;
-        console.log(greeting);
-
-        document.getElementById("greeting").innerHTML = "<h1>Hello World</h1>" // String literal (string)
-        document.getElementById("greeting").innterHTML += `<h2>${altGreeting}</h2>`;
-
+        //while loop
+        let counter = 0;
+        while (counter < 5) {
+            console.log("Counter: " + counter);
+            counter++;
+        }
+ 
+ 
+        while (!userAge) {
+            userAge = prompt("How old are you?"); //prompt returns a string or NULL
+            console.log(userAge);
+        }
+ 
+        let idPresented = true;
 
     </script>
 </body>

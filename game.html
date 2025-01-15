@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack Game</title>
+</head>
+
+<body>
+    <h1>Attack Game</h1>
+    <p id="gameLog"></p> <!-- Paragraph to display the game log -->
+    <p id="result"></p> <!-- Paragraph to display the result -->
+
+    <script>
+        // Prompt the user for the initial strength
+        let strength = prompt("Enter your initial strength:");
+        console.log(strength);
+        
+
+        // Validate the input to ensure it's a number
+        if (strength == null) {
+            document.getElementById("gameLog").innerText = "Game Canceled!";
+        } 
+        
+        else {
+            let attacks = 0; // Counter for the number of attacks
+
+        
+            while (strength > 0) {     // Start the game loop
+                
+                let attackValue = Math.floor(Math.random() * strength) + 1; // Generate a random attack value between 1 and the current strength
+                console.log(attackValue);
+
+                
+                strength -= attackValue; // Reduce the player's strength by the attack value
+
+                
+                attacks++; // Increment the attack counter
+ 
+                
+                document.getElementById("gameLog").innerHTML += "Attack " + attacks + ": -" + attackValue + ".Remaining strength: " + strength + ".<br>"; // Log the attack details to the game log
+            }
+
+            
+            document.getElementById("result").innerText = "Game Over! Total number of attacks: " + attacks; // Display the total number of attacks after the loop ends
+        }
+    </script>
+</body>
+
+</html>
